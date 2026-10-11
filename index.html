@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>زانستی ئەی ئای</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600;800&family=Vazirmatn:wght@400;500;700&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#eef1fb;--card:#ffffffd9;--tx:#141a38;--mu:#5b6590;--bd:#d9dff3;--sh:0 10px 34px #1a245a1f;--dot:#2a3a8a22;--ac:#2e8b57;--ac2:#4cc47f;
+--fd:"Noto Kufi Arabic","Vazirmatn",Tahoma,sans-serif;--fb:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#080c1f;--card:#12183bcc;--tx:#eef1ff;--mu:#9aa5d6;--bd:#242d62;--sh:0 10px 34px #0008;--dot:#ffffff18}}
+:root[data-theme="dark"]{--bg:#080c1f;--card:#12183bcc;--tx:#eef1ff;--mu:#9aa5d6;--bd:#242d62;--sh:0 10px 34px #0008;--dot:#ffffff18}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--tx);font:16px/1.9 var(--fb);background:var(--bg);transition:background .4s}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:radial-gradient(520px 380px at 90% -5%,color-mix(in srgb,var(--ac) 38%,transparent),transparent),radial-gradient(480px 360px at -5% 25%,color-mix(in srgb,var(--ac2) 30%,transparent),transparent),radial-gradient(var(--dot) 1.2px,transparent 1.5px) 0 0/26px 26px;transition:.5s}
+.w{max-width:720px;margin:0 auto;padding:18px 16px 44px}
+.hero{text-align:center;padding:30px 8px 6px}
+.logo{position:relative;margin:14px auto 22px;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-size:40px;background:radial-gradient(circle at 30% 25%,var(--ac2),var(--ac));box-shadow:0 0 44px color-mix(in srgb,var(--ac) 60%,transparent)}
+.logo::before{content:"";position:absolute;inset:-15px;border-radius:50%;border:1.5px dashed color-mix(in srgb,var(--ac2) 75%,transparent);background:radial-gradient(circle at 50% 0,var(--ac2) 0 4.5px,transparent 5.5px);animation:sp 16s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+h1{font:800 clamp(32px,10vw,48px)/1.2 var(--fd);margin:0 0 6px;letter-spacing:-.5px}
+.sub{color:var(--mu);margin:0 0 12px;font-size:15px}
+.pill{display:inline-block;padding:4px 16px;border-radius:99px;font:700 14px var(--fd);color:#fff;background:linear-gradient(135deg,var(--ac),var(--ac2));text-shadow:0 1px 2px #0004;box-shadow:0 6px 18px color-mix(in srgb,var(--ac) 45%,transparent)}
+.subs{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:20px 0}
+.sb{--a:var(--ac);--b:var(--ac2);display:flex;flex-direction:column;align-items:center;gap:7px;border:1.5px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);border-radius:20px;padding:11px 3px 9px;color:var(--tx);cursor:pointer;font:inherit;transition:.2s}
+.sb .e{display:grid;place-items:center;width:46px;height:46px;border-radius:16px;font-size:24px;background:linear-gradient(145deg,var(--a),var(--b));box-shadow:0 6px 14px color-mix(in srgb,var(--a) 40%,transparent)}
+.sb .n{font:700 11.5px/1.35 var(--fd);min-height:31px;display:flex;align-items:center;text-align:center}
+.sb:active{transform:scale(.95)}
+.sb.on{border-color:var(--a);background:color-mix(in srgb,var(--a) 14%,var(--card));box-shadow:0 0 0 3px color-mix(in srgb,var(--a) 28%,transparent),var(--sh)}
+.c{background:var(--card);backdrop-filter:blur(14px);border:1px solid var(--bd);border-radius:26px;padding:18px;margin-bottom:16px;box-shadow:var(--sh)}
+label{font:700 14px var(--fd);color:var(--mu);display:block;margin-bottom:8px}
+textarea,input[type=text]{width:100%;font:inherit;color:var(--tx);background:color-mix(in srgb,var(--bg) 75%,transparent);border:1.5px solid var(--bd);border-radius:16px;padding:12px 14px;outline:none;transition:.2s}
+textarea:focus,input:focus{border-color:var(--ac);box-shadow:0 0 0 4px color-mix(in srgb,var(--ac) 20%,transparent)}
+textarea{min-height:92px;resize:vertical}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
+.b{border:0;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;text-shadow:0 1px 2px #0003;border-radius:16px;padding:11px 16px;font:700 14.5px var(--fd);box-shadow:0 8px 20px color-mix(in srgb,var(--ac) 38%,transparent);transition:.2s}
+.b.s{background:color-mix(in srgb,var(--ac) 11%,transparent);color:var(--tx);text-shadow:none;box-shadow:none;border:1.5px solid var(--bd)}
+.b:active{transform:scale(.97)}.b:disabled{opacity:.5}
+.r{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.r>.b{flex:1;min-width:110px}
+.md{display:flex;gap:6px;background:color-mix(in srgb,var(--ac) 10%,transparent);padding:5px;border-radius:19px}
+.md button{flex:1;border:0;background:transparent;color:var(--mu);padding:10px 4px;border-radius:15px;font:700 14px var(--fd);transition:.2s}
+.md button.on{background:var(--card);color:var(--tx);box-shadow:var(--sh)}
+#pv{max-width:100%;max-height:200px;border-radius:16px;margin-top:12px;display:none;border:1px solid var(--bd)}
+.m{padding:13px 16px;border-radius:20px;margin:12px 0;white-space:pre-wrap;animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.u{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;text-shadow:0 1px 2px #0003;border-bottom-right-radius:5px;width:fit-content;max-width:90%;font-weight:500}
+.a{background:var(--card);border:1px solid var(--bd);border-inline-start:4px solid var(--ac);box-shadow:var(--sh);border-bottom-left-radius:5px}
+.t{font:800 19px/1.5 var(--fd);color:var(--ac);margin-bottom:2px}
+.err{color:#e0455f;font-size:14px;margin-top:8px}
+.tag{font-size:13px;color:var(--mu);text-align:center;margin-top:22px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="hero"><div class="logo" id="lg">🧬</div><h1>زانستی ئەی ئای</h1><p class="sub">مامۆستای زیرەکی تایبەتی تۆ</p><div class="pill" id="cn">زیندەزانی</div></div>
+
+<div class="subs" id="subs">
+<button class="sb on" data-k="bio"><span class="e">🧬</span><span class="n">زیندەزانی</span></button>
+<button class="sb" data-k="phy"><span class="e">⚛️</span><span class="n">فیزیا</span></button>
+<button class="sb" data-k="chem"><span class="e">🧪</span><span class="n">کیمیا</span></button>
+<button class="sb" data-k="math"><span class="e">📐</span><span class="n">بیرکاری</span></button>
+<button class="sb" data-k="eng"><span class="e">🇬🇧</span><span class="n">ئینگلیزی</span></button>
+<button class="sb" data-k="ar"><span class="e">🇸🇦</span><span class="n">عەرەبی</span></button>
+<button class="sb" data-k="ku"><span class="e">☀️</span><span class="n">کوردی</span></button>
+<button class="sb" data-k="cs"><span class="e">💻</span><span class="n">کۆمپیوتەر</span></button>
+<button class="sb" data-k="soc"><span class="e">🌍</span><span class="n">کۆمەڵایەتی</span></button>
+<button class="sb" data-k="val"><span class="e">🤝</span><span class="n">بەهای کۆمەڵایەتی</span></button>
+<button class="sb" data-k="hr"><span class="e">⚖️</span><span class="n">مافی مرۆڤ</span></button>
+<button class="sb" data-k="gen"><span class="e">🕯️</span><span class="n">جینۆساید</span></button>
+<button class="sb" data-k="eco"><span class="e">📈</span><span class="n">ئابووری</span></button>
+<button class="sb" data-k="his"><span class="e">🏛️</span><span class="n">مێژوو</span></button>
+<button class="sb" data-k="geo"><span class="e">🗺️</span><span class="n">جوگرافیا</span></button>
+<button class="sb" data-k="psy"><span class="e">🧠</span><span class="n">دەروونناسی</span></button>
+</div>
+
+<div class="c">
+<label>وانەکە بنووسە یان وێنەی بگرە (ئارەزوومەندانە)</label>
+<textarea id="les" placeholder="دەقی وانەکە (کوردی، ئینگلیزی، عەرەبی...) لێرە دابنێ..."></textarea>
+<div class="r"><button class="b s" id="imgb">📷 وێنە زیاد بکە</button><button class="b" id="sum">✨ ناو و کورتە</button></div>
+<input type="file" id="f" accept="image/*" hidden>
+<img id="pv" alt="">
+<div id="box"></div>
+</div>
+
+<div class="c">
+<label>چۆن تێبگەم؟</label>
+<div class="md" id="modes"><button class="on" data-m="q">💡 پوختی</button><button data-m="s">🔬 زانستی</button><button data-m="c">📖 چیرۆک</button></div>
+<label style="margin-top:14px">پرسیارەکەت</label>
+<input type="text" id="q" placeholder="پرسیارەکەت لێرە بنووسە...">
+<div class="r"><button class="b" id="ask">بپرسە ➤</button><button class="b s" id="exp">وانەکەم شی بکەرەوە</button></div>
+<div class="r"><button class="b" id="both" style="width:100%">⚡ بیکە بە کوردی و شی بکەرەوە (بە یەک کلیک)</button></div>
+<div class="r" id="lang" style="display:none"><button class="b" id="tr">🌐 وانەکە بکە بە کوردی</button><button class="b s" id="gr">📝 ڕێزمانەکەی شی بکەرەوە</button></div>
+<div id="err" class="err"></div>
+</div>
+
+<div id="chat"></div>
+<div class="tag">دروست کراوە لەلایەن میوان مەموندی</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const SUBJ={
+bio:{n:'زیندەزانی',e:'🧬',a:'#2e8b57',b:'#4cc47f',p:'تۆ مامۆستای زیندەزانی (biology)ی.'},
+phy:{n:'فیزیا',e:'⚛️',a:'#3b6cf0',b:'#7aa2ff',p:'تۆ مامۆستای فیزیای (physics)ی. یاسا و یەکەکان و نموونەی ژیانی ڕاستەقینە بهێنەرەوە.'},
+chem:{n:'کیمیا',e:'🧪',a:'#8b3fd9',b:'#d06bff',p:'تۆ مامۆستای کیمیای (chemistry)ی. هاوکێشە و ماددە و کارلێکەکان بە ڕوونی بنووسە.'},
+eng:{n:'ئینگلیزی',e:'🇬🇧',a:'#d6336c',b:'#ff8fab',l:1,p:'تۆ مامۆستای زمانی ئینگلیزیی. ڕێزمان (grammar)، وشە و واتا و نموونەی ئینگلیزی بە ڕوونی ڕوون بکەرەوە و نموونە ئینگلیزییەکان بە ئینگلیزی بنووسە و واتایان بە کوردی بڵێ.'},
+ar:{n:'عەرەبی',e:'🇸🇦',a:'#0c8599',b:'#3bc9db',l:1,p:'تۆ مامۆستای زمانی عەرەبیی. نەحو و سەرف و وشە و واتا بە ڕوونی ڕوون بکەرەوە و نموونە عەرەبییەکان بە عەرەبی (بە حەرەکە ئەگەر پێویست بوو) بنووسە و واتایان بە کوردی بڵێ.'},
+ku:{n:'کوردی',e:'☀️',a:'#c2255c',b:'#f783ac',l:1,p:'تۆ مامۆستای زمانی کوردیی (سۆرانی). ڕێزمان، ڕێنووس، وشەسازی، ڕستەسازی، خاڵبەندی و ئەدەب بە ڕوونی و نموونەوە ڕوون بکەرەوە. ئەگەر دەقی کرمانجی بوو، بە کرمانجی لێکی بدەرەوە بەڵام ڕوونکردنەوەکە بە سۆرانی بنووسە.'},
+cs:{n:'کۆمپیوتەر',e:'💻',a:'#1c7ed6',b:'#4dabf7',l:1,p:'تۆ مامۆستای کۆمپیوتەر و زانستی کۆمپیوتەر (computer science)ی. وانەکان زۆربەیان بە ئینگلیزین: ئینگلیزییەکە بە ڕوونی بە کوردی ڕوون بکەرەوە و زاراوە ئینگلیزییە گرنگەکان (وەک CPU, RAM, algorithm, network, database) هەمیشە بە ئینگلیزی لە کەوانەدا بهێڵەرەوە و واتایان بڵێ. نموونەی ئاسان و کۆدی کورت (ئەگەر پێویست بوو) بهێنەرەوە.'},
+soc:{n:'کۆمەڵایەتی',e:'🌍',a:'#e67700',b:'#fcc419',p:'تۆ مامۆستای وانەی کۆمەڵایەتی (مێژوو، جوگرافیا، ڕێکخستنی کۆمەڵگا و هەرێمی کوردستان و جیهان)ی. بە ڕوونی و ڕێکخراو و بێلایەن ڕوون بکەرەوە، بەروار و ناو و شوێنەکان تەنها ئەگەر دڵنیابوویت بنووسە و داهێنانیان مەکە.'},
+val:{n:'بەهای کۆمەڵایەتی',e:'🤝',a:'#2f9e44',b:'#8ce99a',p:'تۆ مامۆستای بەها کۆمەڵایەتییەکانی وەک ڕێزگرتن، ڕاستگۆیی، هاوکاری، لێبوردەیی، دادپەروەری، ئەرکی هاوڵاتیبوون و ژیانی هاوبەش لە کۆمەڵگادا. بە نموونەی ڕاستەقینەی ژیانی ڕۆژانە و کوردستان ڕوون بکەرەوە.'},
+hr:{n:'مافی مرۆڤ',e:'⚖️',a:'#364fc7',b:'#91a7ff',p:'تۆ مامۆستای مافی مرۆڤ (human rights)ی. جاڕنامەی گەردوونی مافی مرۆڤ، مافی منداڵ، مافی ژنان، ئازادی ڕادەربڕین، یەکسانی و دەستووری عێراق و هەرێمی کوردستان بە ڕوونی و نموونەوە ڕوون بکەرەوە. زاراوە ئینگلیزییەکان لە کەوانەدا بنووسە.'},
+gen:{n:'جینۆساید',e:'🕯️',a:'#495057',b:'#adb5bd',p:'تۆ مامۆستای وانەی جینۆساید (genocide)ی. پێناسەی جینۆساید لە ڕێککەوتننامەی ١٩٤٨ی نەتەوە یەکگرتووەکان، هۆکار و قۆناغ و ئەنجامەکانی، و نموونەکانی وەک ئەنفال و هەڵەبجە و جینۆسایدی فەیلییەکان و بارزانییەکان و ئێزیدییەکان (شنگال) بە ڕاستی و ڕێزەوە و بە شێوەیەکی پەروەردەیی ڕوون بکەرەوە. ژمارە و بەروارەکان تەنها ئەگەر دڵنیابوویت بنووسە و ئەگەر نایزانیت بڵێ دڵنیا نیت. وردەکاری ترسناک و بێ پێویست مەنووسە.'},
+eco:{n:'ئابووری',e:'📈',a:'#0b7285',b:'#66d9e8',p:'تۆ مامۆستای ئابووری (economics)ی. پێداویستی و دابینکردن و داواکاری و نرخ، بازاڕ، پارە، گەشەی ئابووری، گرانی، بازرگانی و ئابووری کوردستان و عێراق بە نموونەی ئاسانی ژیانی ڕۆژانە ڕوون بکەرەوە. زاراوە ئینگلیزییەکان لە کەوانەدا بنووسە و ئەگەر هاوکێشە یان ژمارە هەبوو هەنگاو بە هەنگاو بیانخەرە ڕوو.'},
+his:{n:'مێژوو',e:'🏛️',a:'#a5522a',b:'#e8a87c',p:'تۆ مامۆستای مێژووی. ڕووداوەکان بە ڕیزبەندی کات، هۆکار و ئەنجامەکان، کەسایەتییە گرنگەکان و مێژووی کورد و کوردستان و عێراق و جیهان بە ڕاستی و بێلایەنی ڕوون بکەرەوە. بەروار و ناوەکان تەنها ئەگەر دڵنیابوویت بنووسە، داهێنانیان مەکە و ئەگەر نایزانیت بڵێ دڵنیا نیت.'},
+geo:{n:'جوگرافیا',e:'🗺️',a:'#2b8a3e',b:'#69db7c',p:'تۆ مامۆستای جوگرافیای. شوێن و نەخشە، کەش و هەوا، ڕووبار و چیا و دەریا، دانیشتوان، سەرچاوە سروشتییەکان و جوگرافیای کوردستان و عێراق و جیهان بە ڕوونی و نموونە ڕوون بکەرەوە. ژمارە و شوێنەکان تەنها ئەگەر دڵنیابوویت بنووسە.'},
+psy:{n:'دەروونناسی',e:'🧠',a:'#862e9c',b:'#e599f7',p:'تۆ مامۆستای دەروونناسی (psychology)ی. هەست، ڕەفتار، بیرکردنەوە، لەبیرکردن و فێربوون، کەسایەتی، گەشەسەندنی مرۆڤ و قوتابخانە و دەروونناسە ناوداڕەکان (وەک فرۆید و پیاجێ) بە ڕوونی و نموونەی ئاسان ڕوون بکەرەوە. زاراوە ئینگلیزییەکان لە کەوانەدا بنووسە. تەنها بۆ مەبەستی وانە و فێربوون: ئەمە جێگرەوەی پزیشک و چارەسەری دەروونی نییە.'},
+math:{n:'بیرکاری',e:'📐',a:'#e8590c',b:'#ffa94d',p:'تۆ مامۆستای بیرکاری (mathematics)ی. چارەسەری پرسیارەکان هەنگاو بە هەنگاو بکە و ئەنجامەکە بپشکنە. هاوکێشە بە هێماکانی ئاسایی بنووسە (×، ÷، √، ²) نەک LaTeX.'}};
+const MD={
+q:'شێوازی "پوختی": زۆر ساکار و کورت (٣ تا ٥ ڕستە)، بە زمانی ئاسان بۆ قوتابی، بێ وشەی قورس.',
+s:'شێوازی "زانستی": بە وردی و زانستی، بە زاراوە و میکانیزم و هۆکارەکان و ڕیزبەندی. زاراوە زانستییەکان بە ئینگلیزیش لە کەوانەدا بنووسە.',
+c:'شێوازی "چیرۆک": چیرۆکێکی کورت و جوان بە کەسایەتی و ڕووداو، کە زانیارییە زانستییە ڕاستەکان تێیدا بن و قوتابی بە ئاسانی تێی بگات.'};
+const KN=['soc','val','hr','gen','eco','his','geo','psy'];let sk='bio',mode='q',img=null,hist=[],sample=null,canImg=false,sum='';
+
+function theme(){const s=SUBJ[sk],r=document.documentElement.style;r.setProperty('--ac',s.a);r.setProperty('--ac2',s.b);$('lg').textContent=s.e;$('cn').textContent=s.n}
+(async()=>{try{sample=await claude.use('sample');if(sample){try{canImg=!!(await sample.limits()).images}catch(e){}}}catch(e){}
+if(!sample)$('err').textContent='ئەم تایبەتمەندییە لێرەدا بەردەست نییە.'})();
+
+$('subs').onclick=e=>{const b=e.target.closest('.sb');if(!b)return;sk=b.dataset.k;
+document.querySelectorAll('.sb').forEach(x=>x.classList.toggle('on',x===b));hist=[];sum='';$('box').innerHTML='';theme();$('lang').style.display=SUBJ[sk].l?'flex':'none';$('both').textContent=KN.includes(sk)?'🔍 شیکار و پوختە (بە یەک کلیک)':'⚡ بیکە بە کوردی و شی بکەرەوە (بە یەک کلیک)';$('gr').textContent=sk=='cs'?'🔍 شیکاری وانەکە':'📝 ڕێزمانەکەی شی بکەرەوە';$('tr').textContent=sk=='ku'?'🌐 وانەکە بکە بە ئینگلیزی و عەرەبی':'🌐 وانەکە بکە بە کوردی'};
+$('modes').onclick=e=>{const b=e.target.closest('button');if(!b)return;mode=b.dataset.m;
+document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x===b))};
+$('imgb').onclick=()=>$('f').click();
+$('f').onchange=e=>{const f=e.target.files[0];if(!f)return;const u=URL.createObjectURL(f),im=new Image();
+im.onload=()=>{const k=Math.min(1,1280/Math.max(im.width,im.height)),c=document.createElement('canvas');
+c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);c.toBlob(b=>{img=b},'image/jpeg',.85)};
+im.src=u;$('pv').src=u;$('pv').style.display='block'};
+
+const sys=()=>SUBJ[sk].p+' هەمیشە بە کوردی سۆرانی وەڵام بدەرەوە. زانیاری ڕاست بدە و داهێنان مەکە. '+MD[mode];
+const ctx=()=>(sum?'پوختەی وانە: '+sum+'\n':'')+($('les').value.trim()?'دەقی وانە:\n'+$('les').value.trim()+'\n':'');
+const opts=()=>{const o={cache:false};if(img&&canImg)o.images=[img];return o};
+function add(c,t){const d=document.createElement('div');d.className='m '+c;d.textContent=t;$('chat').appendChild(d);d.scrollIntoView({block:'nearest'});return d}
+
+async function run(prompt,label){
+if(!sample)return;$('err').textContent='';add('u',label);const a=add('a','...');
+const first=sys()+'\n\n'+ctx()+'\n'+prompt;
+const turns=hist.length?[{role:'user',content:sys()+'\n\n'+ctx()+'\n'+hist[0].content},...hist.slice(1),{role:'user',content:prompt}]:[{role:'user',content:first}];
+$('ask').disabled=$('exp').disabled=$('tr').disabled=$('gr').disabled=$('both').disabled=true;
+try{const r=await sample(turns,{...opts(),onText:({text})=>{a.textContent=text;a.scrollIntoView({block:'nearest'})}});
+a.textContent=r.text;if(!hist.length)hist.push({role:'user',content:prompt});else hist.push({role:'user',content:prompt});
+hist.push({role:'assistant',content:r.text});if(hist.length>12)hist=hist.slice(-12)
+}catch(e){a.remove();$('err').textContent='کێشەیەک ڕوویدا، دووبارە هەوڵ بدەرەوە.'}
+$('ask').disabled=$('exp').disabled=$('tr').disabled=$('gr').disabled=$('both').disabled=false}
+
+$('ask').onclick=()=>{const q=$('q').value.trim();if(!q)return;$('q').value='';
+run('پرسیار: '+q+'\nئەگەر وانە یان وێنە هەیە پشتی پێ ببەستە، ئەگەرنا بە زانیاری گشتی وەڵام بدەرەوە.','❓ '+q)};
+$('q').onkeydown=e=>{if(e.key==='Enter')$('ask').click()};
+$('tr').onclick=()=>run(sk=='ku'?'وانەکە (دەق و/یان وێنە) بگێڕە بۆ ئینگلیزی و عەرەبی. بەم ڕیزبەندییە بنووسە: ١) ناوی بابەتەکە، ٢) کورتەیەکی ٢ تا ٣ ڕستەیی، ٣) وەرگێڕان بۆ ئینگلیزی، ٤) وەرگێڕان بۆ عەرەبی، ٥) لیستی وشە و واتا.':'وانەکە (دەق و/یان وێنە) بگێڕە بۆ کوردی سۆرانی. بەم ڕیزبەندییە بنووسە: ١) ناوی بابەتەکە، ٢) کورتەیەکی ٢ تا ٣ ڕستەیی، ٣) وەرگێڕانی تەواوی وانەکە ڕستە بە ڕستە (دەقە ئەسڵییەکە لەسەر و وەرگێڕانەکە لە خوار هەر ڕستەیەک). ئەگەر وشەی گرنگ هەبوو لە کۆتاییدا لیستێکی وشە و واتا بنووسە.','🌐 وانەکەم بکە بە کوردی');
+$('gr').onclick=()=>sk=='cs'?run('ئەم وانەیە (دەق و/یان وێنە) بە کوردی شیکار بکە: ١) ناوی بابەت، ٢) کورتە، ٣) چەمکە سەرەکییەکان یەک بە یەک (زاراوەی ئینگلیزی + واتا + ڕوونکردنەوە)، ٤) چۆنیەتی کارکردنی بە هەنگاو، ٥) نموونەیەکی ئاسان، ٦) خاڵە گرنگەکانی بۆ تاقیکردنەوە.','🔍 وانەکەم شیکار بکە'):run('ڕێزمانی ئەم وانەیە (دەق و/یان وێنە) شی بکەرەوە: ناوی بابەت، کورتە، پاشان یاساکان بە ڕوونی و نموونە و هەڵەی باو.','📝 ڕێزمانەکەم شی بکەرەوە');
+$('both').onclick=()=>KN.includes(sk)?run('ئەم وانەیە (دەق و/یان وێنە) کە بە کوردییە شیکار بکە و بە ئاسانی ڕوونی بکەرەوە، بەم ڕیزبەندییە: ١) ناوی بابەتەکە، ٢) کورتەیەکی ٢ تا ٣ ڕستەیی، ٣) خاڵە سەرەکییەکان یەک بە یەک بە ڕوونکردنەوە، ٤) نموونەیەکی ئاسان، ٥) خاڵە گرنگەکان بۆ تاقیکردنەوە.','🔍 شیکار و پوخته'):run('ئەم وانەیە (دەق و/یان وێنە) هەم بکە بە کوردی هەم شیکار بکە، بەم ڕیزبەندییە: ١) ناوی بابەتەکە، ٢) کورتەیەکی ٢ تا ٣ ڕستەیی، ٣) وەرگێڕانی تەواوی وانەکە بۆ کوردی سۆرانی (ئەگەر وانەکە لە ئێستادا بە کوردییە، ئەم بەشە بە کورتی بنووسە)، ٤) شیکار: چەمکە سەرەکییەکان یەک بە یەک بە ڕوونکردنەوە و زاراوە ئینگلیزی/عەرەبییەکان لە کەوانەدا، ٥) ئەگەر وانەکە زمانە (ئینگلیزی/عەرەبی/کوردی) ڕێزمانەکەشی شی بکەرەوە، ٦) نموونەیەکی ئاسان، ٧) خاڵە گرنگەکان بۆ تاقیکردنەوە.','⚡ کوردی + شیکار');
+$('exp').onclick=()=>run('وانەکە (دەق و/یان وێنە) بۆ شی بکەرەوە.','📖 وانەکەم بۆ شی بکەرەوە');
+
+$('sum').onclick=async()=>{
+if(!sample)return;if(!$('les').value.trim()&&!img){$('err').textContent='سەرەتا دەقێک بنووسە یان وێنەیەک زیاد بکە.';return}
+$('err').textContent='';$('sum').disabled=true;$('box').innerHTML='<div class="m a">...</div>';
+try{const j=await sample.json(SUBJ[sk].p+' بە کوردی سۆرانی. لەم وانەیەوە (دەق و/یان وێنە) ناوی بابەتەکە و کورتەیەکی ٢ تا ٣ ڕستەیی بنووسە. تەنها JSON بگەڕێنەوە: {"title":"...","summary":"..."}\n\n'+ctx(),opts());
+sum=j.title+' — '+j.summary;const b=$('box');b.innerHTML='';const t=document.createElement('div');t.className='m a';
+t.innerHTML='<div class="t"></div><div class="p"></div>';t.querySelector('.t').textContent=j.title;t.querySelector('.p').textContent=j.summary;b.appendChild(t)
+}catch(e){$('box').innerHTML='';$('err').textContent='نەتوانرا کورتە دروست بکرێت، دووبارە هەوڵ بدەرەوە.'}
+$('sum').disabled=false};
+document.querySelectorAll('.sb').forEach(b=>{const t=SUBJ[b.dataset.k];b.style.setProperty('--a',t.a);b.style.setProperty('--b',t.b)});
+theme();
+</script>
+</body>
+</html>
